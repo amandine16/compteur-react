@@ -1,0 +1,77 @@
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+
+  .Header {
+    border-bottom: 1px solid lightgrey;
+    display: flex;
+    align-items: center;
+    padding: 20px 100px;
+    svg {
+      margin-right: 50px;
+    }
+    p {
+      font-size: 48px;
+    }
+  }
+  .center {
+    @include center;
+  }
+  .compteur {
+    @include center;
+    flex-direction: column;
+    height: 80vh;
+    .theCounter {
+      font-size: 96px;
+
+      font-weight: 400;
+      line-height: 117px;
+
+      color: white;
+      height: 150px;
+      width: 150px;
+      background: #5c48d3;
+      border-radius: 15px;
+      @include center;
+    }
+    button {
+      height: 52.5px;
+      width: 52.5px;
+      font-size: 50px;
+      font-weight: 900;
+      margin: 0 30px;
+      border: none;
+      outline: none;
+      background: none;
+      cursor: pointer;
+      @include center;
+      svg {
+        fill: black;
+        &:hover {
+          fill: #5c48d3;
+        }
+      }
+    }
+    .reset {
+      margin-top: 20px;
+      background: #5c48d3;
+      height: 60px;
+      width: 150px;
+      border-radius: 15px;
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 39px;
+      color: white;
+    }
+  }
+}
